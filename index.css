@@ -50,10 +50,12 @@ body {
     padding: 40px 100px 40px 100px;
 }
 
+  /* Content Title*/
 .content h2 {
     font-size: 40px;
 }
 
+ /* Content paragraph*/
 .content p {
     display: inline-block;
     font-size: 20px;
@@ -62,6 +64,7 @@ body {
     vertical-align: top;
 }
 
+/* Content image*/
 .content img {
     display: inline-block;
     object-fit: scale-down;
@@ -70,6 +73,7 @@ body {
     margin-top: 20px;
 }
 
+/* Header of the page*/
 header h1 {
     margin-left: 200px;
     height: 200px;
@@ -78,12 +82,14 @@ header h1 {
     text-align: center;
 }
 
+/* Footer of the page*/
 footer h2 {
     margin-left: 200px;
     height: 200px;
     line-height: 150px;
     text-align: center;
 }
+
 /*
 h2, p, div, a, header, img {
   border: 2px solid blue;
