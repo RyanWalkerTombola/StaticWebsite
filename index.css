@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+
+.date {
+    background-color: rgb(85, 107, 129);
+    display: inline-block;
+    width: 10%;
+    height: 150px;
+    line-height: 150px;
+
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.title {
+    background-color: darkcyan;
+    display: inline-block;
+    width: 90%;
+    height: 150px;
+    line-height: 150px;
+    padding-left: 25px;
+
+    color: white;
+    text-align: left;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+p {
+    background-color: lightseagreen;
+    opacity: 0.7;
+    display: inline-block;
+    width: 90%;
+    height: 450px;
+    line-height: 150px;
+    padding-left: 25px;
+    margin-left: 10%;
+
+    color: black;
+    text-align: left;
+    font-size: 20px;
+}
