@@ -47,7 +47,7 @@ body {
   /* Style the content */
 .content {
     margin-left: 200px;
-    padding: 40px 200px 40px 100px;
+    padding: 40px 100px 40px 100px;
 }
 
 .content h2 {
@@ -55,8 +55,19 @@ body {
 }
 
 .content p {
+    display: inline-block;
     font-size: 20px;
     line-height: 40px;
+    width: 64%;
+    vertical-align: top;
+}
+
+.content img {
+    display: inline-block;
+    object-fit: scale-down;
+    width: 30%;
+    height: 50%;
+    margin-top: 20px;
 }
 
 header h1 {
@@ -73,8 +84,7 @@ footer h2 {
     line-height: 150px;
     text-align: center;
 }
-
 /*
-h2, p, div, a, header {
+h2, p, div, a, header, img {
   border: 2px solid blue;
 } 
