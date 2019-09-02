@@ -9,6 +9,7 @@ body {
     font-family: monospace, Helvetica, sans-serif;
 }
 
+/* Adds Earth background image at the top of the page and repeating space background */
 .background-img {
   background-image: url("Images/Earth.jpg"), url("Images/stars.png");
   background-color: black;
@@ -52,33 +53,33 @@ body {
     animation-duration: 0.2s;
 }
   
-  /* Change color on hover */
+  /* Animates Navlink when hovered */
 .sidenav a:hover {
-    /*background-color: #ddd;
-    color: black;*/
     animation-name: highlight;
     animation-duration: 0.4s;
     background-color: #ddd;
     color: black;
 }
 
+/* Highlights Navlink */
 @keyframes highlight {
   from {background-color: black; color: #ddd;}
   to {background-color: #ddd; color: black;}
 }
 
+/* Fades Navlink */
 @keyframes fade {
   from {background-color: #ddd; color: black;}
   to {background-color: black; color: #ddd;}
 }
   
-  /* Style the content */
+  /* Shapes & lays out the content box */
 .content {
     padding: 40px 100px 40px 100px;
     margin: 200px 0;
   }
 
-  /* Content Title*/
+  /* Content title*/
 .content h2 {
     font-size: 40px;
 }
@@ -93,11 +94,12 @@ body {
     vertical-align: top;
 }
 
+/* Resiszes content if there is no image */
 .noimg p, ul, dl{
   width: 100%;
 }
 
-/* Content image*/
+/* Content image */
 .content img {
     display: inline-block;
     /*object-fit: scale-down;*/
@@ -107,7 +109,7 @@ body {
     border-radius: 50px;
 }
 
-/* Header of the page*/
+/* Header of the page */
 header {
     height: 250px;
     margin-top: 220px;
@@ -116,6 +118,7 @@ header {
     position: relative;
 }
 
+/* Div that hold the header and image */
 header div {
   margin: 0;
   left: 20%;
@@ -125,11 +128,13 @@ header div {
   height: 250px;
 }
 
+/* Header Image (SpaceX) */
 header img {
   width: 100%;
   margin: 0;
 }
 
+/* Header Text */
 header h2 {
   height: 60px;
   line-height: 60px;
@@ -144,6 +149,7 @@ footer h2 {
     text-align: center;
 }
 
+/* Mars background image */
 footer {
   background-image: url("Images/Mars.jpg");
   background-color: black;
@@ -153,7 +159,7 @@ footer {
   background-size: cover;
 }
 
-/*
+/* Uncomment for debug mode
 h1, h2, p, div, a, header, img, footer, ul, dl {
   border: 2px solid blue;
 }*/
