@@ -1,8 +1,8 @@
 
 <head>
         <title>The History of SpaceX</title>
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <script type="text/javascript" src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="History.css">
+        <script type="text/javascript" src="History.js"></script>
 </head>
 <body class = "background-img" onload="moveHeader();">
     <header>
@@ -12,7 +12,11 @@
         </div>
     </header>
     <main>
-        <div class='sideNav'>
+        <div class='navBar'>
+            <a href="SpaceX.html">About</a>
+            <a href="Achievements.html">Achievements</a>
+        </div>
+        <div id='sideNav' onclick="toggleNavbar();">
             <img src="Images/Button.png">
             <h3>Timeline</h3>
             <div>
@@ -96,6 +100,7 @@
         </div>
     </main>
     <footer>
-        <h2>Footer stuff goes here</h2>
+        <a href="History.html">Back to Top</a>
+        <a href="SpaceX.html">About</a> 
     </footer>
 </body>

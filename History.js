@@ -17,3 +17,7 @@ function easeIn (time, startValue, deltaValue, duration) {
     time /= duration;
     return -deltaValue * time*(time-2) + startValue;
 }
+
+function toggleNavbar() {
+    document.getElementById('sideNav').classList.toggle('active');
+}

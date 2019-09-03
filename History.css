@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     color: #ddd;
@@ -24,61 +25,59 @@ body {
   background-size: cover;
 }
   
-  /* Style the side navigation */
-.sidenav {
+/* Style the side navigation */
+#sidenav {
     border: 2px solid #ddd;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 10px;
     background-color: black;
     overflow-x: hidden;
-    animation: retract 0.6s;
-    animation-fill-mode: forwards;
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
     overflow: hidden;
+    transition: all 500ms ease;
 }
 
-.sidenav:hover {
-  animation: extend 0.6s;
-  animation-fill-mode: both;
+/* Opens the sidenav*/
+#sidenav.active {
+  width: 200px;
+  height: 500px;
+  border-radius: 20px;
 }
 
-@keyframes retract {
-  0% {width: 200px; height: 500px; border-radius: 20px;}
-  100% {width: 56px; height: 56px; border-radius: 10px;}
-}
-
-@keyframes extend {
-  0% {width: 56px; height: 56px; border-radius: 10px;}
-  100% {width: 200px; height: 500px; border-radius: 20px;}
-}
-
-.sidenav img {
+/* Button image of the sidenav*/
+#sidenav img {
+  object-fit: scale-down;
   display: block;
-  border-radius: 0;
+  border-radius: 5px;
   margin: 5px 0; 
   height: 40px;
-  width: 40px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 }
 
-.sidenav div {
+/* Holds all the navlinks in the sidenav*/
+#sidenav div {
   border-radius: 0;
   overflow: scroll;
   height: 75%;
 }
 
-  /* Side navigation Title */
-.sidenav h3 {
+/* Side navigation Title */
+#sidenav h3 {
     margin-top: 20px;
     padding: 0 4px;
     text-align: center;
     font-size: 28px;
 }
   
-  /* Side navigation links */
-.sidenav a {
+/* Side navigation links */
+#sidenav a {
     padding: 12px;
     text-decoration: none;
     display: block;
@@ -92,8 +91,8 @@ body {
     overflow: hidden;
 }
   
-  /* Animates Navlink when hovered */
-.sidenav a:hover {
+/* Animates Navlink when hovered */
+#sidenav a:hover {
     animation-name: highlight;
     animation-duration: 0.4s;
     background-color: #ddd;
@@ -112,14 +111,14 @@ body {
   to {background-color: black; color: #ddd;}
 }
   
-  /* Shapes & lays out the content box */
+/* Shapes & lays out the content box */
 .content {
     padding: 2% 4%;
     margin: 10% 5%;
     border-radius: 50px;
   }
 
-  /* Content title*/
+/* Content title */
 .content h2 {
     font-size: 40px;
     background-color: black;
@@ -127,7 +126,7 @@ body {
     padding: 20px;
 }
 
- /* Content paragraph*/
+/* Content paragraph */
 .content p, ul, dl {
     display: inline-block;
     font-size: 20px;
@@ -154,20 +153,18 @@ body {
 
 /* Content image */
 .content img {
-    display: inline-block;
-    /*object-fit: scale-down;*/
-    width: 35%;
-    /*height: 50%;*/
-    margin-top: 2%;
+  display: inline-block;
+  width: 35%;
+  margin-top: 2%;
 }
 
 /* Header of the page */
 header {
-    height: 250px;
-    margin-top: 220px;
-    margin-bottom: 600px;
-    text-align: center;
-    position: relative;
+  height: 250px;
+  margin-top: 220px;
+  margin-bottom: 420px;
+  text-align: center;
+  position: relative;
 }
 
 /* Div that hold the header and image */
@@ -197,9 +194,9 @@ header h2 {
 
 /* Footer of the page*/
 footer h2 {
-    height: 200px;
-    line-height: 150px;
-    text-align: center;
+  height: 200px;
+  line-height: 150px;
+  text-align: center;
 }
 
 /* Mars background image */
@@ -211,6 +208,53 @@ footer {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 1000px;
+  border: 2px solid #ddd;
+  margin: 0 10px;
+  animation: fade 0.2s;
+  overflow: hidden;
+  width: auto;
+}
+
+footer a:hover {
+  animation: highlight 0.4s;
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+.navBar {
+  text-align: center;
+}
+
+.navBar a {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 1000px;
+  border: 2px solid #ddd;
+  margin: 0 10px;
+  animation: fade 0.2s;
+  overflow: hidden;
+  width: auto;
+}
+
+.navBar a:hover {
+  animation: highlight 0.4s;
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
 }
 
 /* Uncomment for debug mode
