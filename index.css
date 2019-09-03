@@ -1,11 +1,16 @@
 * {
     box-sizing: border-box;
     color: #ddd;
+    border-radius: 50px;
     /*border: 2px solid blue;*/
-  }
+}
+
+html, body {
+  border: none;
+}
   
 body {
-    margin: 0 0 0 200px;
+    margin: 0;
     font-family: monospace, Helvetica, sans-serif;
 }
 
@@ -21,23 +26,56 @@ body {
   
   /* Style the side navigation */
 .sidenav {
-    height: 100%;
-    width: 200px;
+    border: 2px solid #ddd;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: black;
     overflow-x: hidden;
+    animation: retract 0.6s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+.sidenav:hover {
+  animation: extend 0.6s;
+  animation-fill-mode: both;
+}
+
+@keyframes retract {
+  0% {width: 200px; height: 500px; border-radius: 20px;}
+  100% {width: 56px; height: 56px; border-radius: 10px;}
+}
+
+@keyframes extend {
+  0% {width: 56px; height: 56px; border-radius: 10px;}
+  100% {width: 200px; height: 500px; border-radius: 20px;}
+}
+
+.sidenav img {
+  display: block;
+  border-radius: 0;
+  margin: 5px 0; 
+  height: 40px;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidenav div {
+  border-radius: 0;
+  overflow: scroll;
+  height: 75%;
 }
 
   /* Side navigation Title */
 .sidenav h3 {
+    margin-top: 20px;
     padding: 0 4px;
     text-align: center;
     font-size: 28px;
 }
-  
   
   /* Side navigation links */
 .sidenav a {
@@ -46,11 +84,12 @@ body {
     display: block;
     text-align: center;
     font-size: 18px;
-    border-radius: 100px;
+    border-radius: 1000px;
     border: 2px solid #ddd;
     margin: 20px 20px;
     animation-name: fade;
     animation-duration: 0.2s;
+    overflow: hidden;
 }
   
   /* Animates Navlink when hovered */
@@ -75,13 +114,17 @@ body {
   
   /* Shapes & lays out the content box */
 .content {
-    padding: 40px 100px 40px 100px;
-    margin: 200px 0;
+    padding: 2% 4%;
+    margin: 10% 5%;
+    border-radius: 50px;
   }
 
   /* Content title*/
 .content h2 {
     font-size: 40px;
+    background-color: black;
+    border-radius: 50px;
+    padding: 20px;
 }
 
  /* Content paragraph*/
@@ -89,9 +132,19 @@ body {
     display: inline-block;
     font-size: 20px;
     line-height: 40px;
-    margin-right: 40px;
+    margin-right: 4%;
+    margin-top: 2%;
     width: 60%;
     vertical-align: top;
+    background-color: black;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+ /* Styles quotes */
+.content span {
+  font-style: italic;
+  font-weight: 900;
 }
 
 /* Resiszes content if there is no image */
@@ -103,10 +156,9 @@ body {
 .content img {
     display: inline-block;
     /*object-fit: scale-down;*/
-    width: 30%;
+    width: 35%;
     /*height: 50%;*/
-    margin-top: 20px;
-    border-radius: 50px;
+    margin-top: 2%;
 }
 
 /* Header of the page */
@@ -120,11 +172,12 @@ header {
 
 /* Div that hold the header and image */
 header div {
+  opacity: 0;
   margin: 0;
   left: 20%;
   width: 60%;
   position: absolute;
-  top: 800px;
+  top: 400px;
   height: 250px;
 }
 
@@ -139,7 +192,7 @@ header h2 {
   height: 60px;
   line-height: 60px;
   font-size: 60px;
-  margin: 0;
+  margin: 20px 0 0 0;
 }
 
 /* Footer of the page*/
@@ -151,6 +204,7 @@ footer h2 {
 
 /* Mars background image */
 footer {
+  width: 100%;
   background-image: url("Images/Mars.jpg");
   background-color: black;
   height: 300px;
@@ -160,6 +214,6 @@ footer {
 }
 
 /* Uncomment for debug mode
-h1, h2, p, div, a, header, img, footer, ul, dl {
+h1, h2, p, div, a, header, img, footer, ul, dl, body {
   border: 2px solid blue;
 }*/
