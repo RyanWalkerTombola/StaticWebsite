@@ -26,7 +26,7 @@ body {
 
 /* Header of the page */
 header {
-    margin: 230px 20% 0 20%;
+    margin: 220px 20% 0 20%;
     text-align: center;
 }
 
@@ -37,7 +37,7 @@ header h1 {
 
 /* Header Text */
 header h2 {
-    margin-bottom: 426px;
+    margin-bottom: 436px;
     line-height: 30px;
     font-size: 24px;
     font-weight: 400;
@@ -91,7 +91,7 @@ header h2 {
 }
 
 /* Content paragraph */
-.content p, ul, dl, select {
+.content p, ul, dl, table, .left{
     display: inline-block;
     font-size: 20px;
     line-height: 40px;
@@ -104,7 +104,45 @@ header h2 {
     padding: 20px;
 }
 
+.left {
+  padding: 0;
+  border: 2px solid #ddd;
+}
+
+.left p {
+  width: 100%;
+  margin: 0;
+}
+
+.left table {
+  border-bottom: 2px solid #ddd;
+  border-radius: 50px 50px 0 0;
+  width: 100%;
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.left table td {
+  width: 60%;
+}
+
+.content select {
+  display: inline-block;
+  font-size: 20px;
+  background-color: black;
+}
+
 /* Resiszes content if there is no image */
 .noimg p, ul, dl{
     width: 100%;
   }
+
+  /* Content image */
+.content img {
+  display: inline-block;
+  width: 35%;
+  margin-top: 2%;
+}
