@@ -1,0 +1,62 @@
+<head>
+        <title>Capabilities & Services</title>
+        <link rel="stylesheet" type="text/css" href="Rockets.css">
+        <script type="text/javascript" src="Rockets.js"></script>
+
+</head>
+<body class = "background-img" onload="changeText()">
+    <header>
+        <h1>Capabilities & Services</h1>
+        <h2>SpaceX offers competative pricing for its Falcon 9 and Falcon Heavy launch services. Modest discounts are available, for contractually committed, multi-launch
+            purchases. SpaceX can also offer crew transportation services to commercial customers seeking transport astronauts to alternate LEO destinations.</h2>
+        <div>
+            <a href="History.html" class="button">History</a>
+            <a href="SpaceX.html" class="button">About</a>
+        </div>       
+    </header>
+    <main>
+        <div class="content">
+            <div>
+                <select id="rocket_select" onchange="changeText()">
+                    <option value="falcon1">Falcon 1</option>
+                    <option value="falcon9">Falcon 9</option>
+                    <option value="falconHeavy">Falcon Heavy</option>
+                    <option value="bfr">BFR</option>
+                </select>
+            </div>
+            <div class="left">
+                <table>
+                    <tr>
+                        <th colspan="2">Statistics</th>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td class="center" id="rocket_status">In Use</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td class="center" id="rocket_price">$62M</td>
+                    </tr>
+                    <tr>
+                        <th class="center" colspan="2">Destination</th>
+                    </tr>
+                    <tr>
+                        <td>Low Earth Orbit (LEO)</td>
+                        <td class="center" id="rocket_leo">22,800 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Geosynchronous Transfer Orbit (GTO)</td>
+                        <td class="center" id="rocket_gto">8,300 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Payload To Mars</td>
+                        <td class="center" id="rocket_mars">4,020 kg</td>
+                    </tr>
+                </table>
+                <p id="rocket_text"> Hello!</p>
+            </div>
+            
+            <img id="rocket_image" src="" alt="">
+        </div>
+    </main>
+</body>
