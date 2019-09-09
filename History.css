@@ -87,10 +87,10 @@ body {
 .background-img {
   background-image: url("Images/Earth.jpg"), url("Images/stars.png");
   background-color: black;
-  height: 200px;
-  background-position: center;
+  height: 400px;
+  background-position: top;
   background-repeat: no-repeat, repeat-y;
-  background-size: cover;
+  background-size: contain;
 }
   
 /* Style the side navigation */
@@ -179,9 +179,13 @@ body {
   to {background-color: black; color: var(--theme-color);}
 }
 
+main {
+  margin-top: 15%;
+}
+
 .content div{
   float: left;
-  margin: 50px;
+  margin: 25px 50px;
   padding: 15px;
   background-color: black;
   border: 2px solid var(--theme-color);
@@ -217,7 +221,7 @@ body {
 /* Header of the page */
 header {
   height: 250px;
-  margin-top: 220px;
+  margin-top: 5%;
   text-align: center;
   position: relative;
 }
