@@ -5,81 +5,92 @@
         <script type="text/javascript" src="History.js"></script>
 </head>
 <body class = "background-img" onload="moveHeader();">
+        <div class='navBar'>
+                <a href="SpaceX.html">About</a>
+                <a href="Rockets.html">Rockets</a>
+            </div>
+            <div id='sideNav' onclick="toggleNavbar();">
+                <img src="Images/Button.png">
+                <h3>Timeline</h3>
+                <div>
+                        <a href="#2001">2001</a>
+                        <a href="#2002">2002</a>
+                        <a href="#2006">2006</a>
+                        <a href="#2008">2008</a>
+                        <a href="#2012">2012</a>
+                        <a href="#Achievements">Achievements</a>
+                </div>
+            </div>
     <header>
         <div id="headerMove">
             <h2>The History of</h2>
             <img src="images/SpaceX.png" alt="">
         </div>
     </header>
-    <main>
-        <div class='navBar'>
-            <a href="SpaceX.html">About</a>
-            <a href="Rockets.html">Rockets</a>
-        </div>
-        <div id='sideNav' onclick="toggleNavbar();">
-            <img src="Images/Button.png">
-            <h3>Timeline</h3>
+    <main class='row'>
+        <div class='content col-t-12 col-6 col-w-6' id='2001'>
             <div>
-                    <a href="#2001">2001</a>
-                    <a href="#2002">2002</a>
-                    <a href="#2006">2006</a>
-                    <a href="#2008">2008</a>
-                    <a href="#2012">2012</a>
-                    <a href="#Achievements">Achievements</a>
+                <h2>2001 An Idea was Born</h2>
+                <img class='col-t-4 col-12 col-w-5' src="images/Elon Musk.jpg" alt="">
+                <p class='col-t-8 col-12 col-w-7'>In 2001, entrepreneur <a href="https://en.wikipedia.org/wiki/Elon_Musk">Elon Musk</a> conceptualized the Mars Oasis project, he had plans 
+                    to take an experimental greenhouse to Mars in an attempt to regain public interest in space exploration. <span>"This would be the furthest that 
+                    life's ever traveled"</span> Musk tried to buy cheap rockets from Russia but couldn't find any for an affordable price. On the flight home, Musk 
+                    realised he could start a company that could build the affordable rockets he needed. Musk calculated that the raw material cost of a 
+                    conventional rocket was only 3% of the sale price, by applying vertical intergration, producing 85% of launch hardware in-house, and the 
+                    modual approach from software engineering, he could cut the launch price by a factor of 10 and still enjoy a 70% gross margin.</p>  
             </div>
+
         </div>
-        <div class='content' id='2001'>
-            <h2>2001 An Idea was Born</h2>
-            <p>In 2001, entrepreneur <a href="https://en.wikipedia.org/wiki/Elon_Musk">Elon Musk</a> conceptualized the Mars Oasis project, he had plans 
-                to take an experimental greenhouse to Mars in an attempt to regain public interest in space exploration. <span>"This would be the furthest that 
-                life's ever traveled"</span> Musk tried to buy cheap rockets from Russia but couldn't find any for an affordable price. On the flight home, Musk 
-                realised he could start a company that could build the affordable rockets he needed. Musk calculated that the raw material cost of a 
-                conventional rocket was only 3% of the sale price, by applying vertical intergration, producing 85% of launch hardware in-house, and the 
-                modual approach from software engineering, he could cut the launch price by a factor of 10 and still enjoy a 70% gross margin.</p>
-            <img src="images/Elon Musk.jpg" alt="">
-        </div>
-        <div class='content' id='2002'>
+        <div class='content col-t-12 col-6 col-w-6' id='2002'>
+            <div>
                 <h2>2002 The Company was Founded</h2>
-                <p>(needs updating)In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
+                <img class='col-t-4 col-12 col-w-5' src="Images/SpaceX Building.jpg" alt=""> 
+                <p class='col-t-8 col-12 col-w-7'>(needs updating)In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
                     engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
                     headquartered in a warehouse in El Segundo, California. The company has grown rapidly since it was founded in 2002, growing from 160 
                     employees in November 2005 to 1,100 in 2010, 3,800 employees and contractors by October 2013, nearly 5,000 by late 2015, and 
                     about 6,000 in April 2017. As of November 2017, the company had grown to nearly 7,000. In 2016, Musk gave a speech at the 
                     International Astronautical Congress, where he explained that the US government regulates rocket technology as an "advanced weapon 
                     technology", making it difficult to hire non-Americans.</p>
-                <img src="Images/SpaceX Building.jpg" alt=""> 
+            </div>
         </div>
-        <div class='content noimg' id='2006'>
-            <h2>2006 Title Goes Here</h2>
-            <p>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
-                engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
-                headquartered in a warehouse in El Segundo, California. The company has grown rapidly since it was founded in 2002, growing from 160 
-                employees in November 2005 to 1,100 in 2010, 3,800 employees and contractors by October 2013, nearly 5,000 by late 2015, and 
-                about 6,000 in April 2017. As of November 2017, the company had grown to nearly 7,000. In 2016, Musk gave a speech at the 
-                International Astronautical Congress, where he explained that the US government regulates rocket technology as an "advanced weapon 
-                technology", making it difficult to hire non-Americans.</p>    
-        </div>
-        <div class='content noimg' id='2008'>
-                <h2>2008 Title Goes Here</h2>
-                <p>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
+        <div class='content col-t-12 col-6 col-w-4' id='2006'>
+            <div>
+                <h2 class='row'>2006 Title Goes Here</h2>
+                <p class='col-12'>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
                     engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
                     headquartered in a warehouse in El Segundo, California. The company has grown rapidly since it was founded in 2002, growing from 160 
                     employees in November 2005 to 1,100 in 2010, 3,800 employees and contractors by October 2013, nearly 5,000 by late 2015, and 
                     about 6,000 in April 2017. As of November 2017, the company had grown to nearly 7,000. In 2016, Musk gave a speech at the 
                     International Astronautical Congress, where he explained that the US government regulates rocket technology as an "advanced weapon 
-                    technology", making it difficult to hire non-Americans.</p>    
+                    technology", making it difficult to hire non-Americans.</p>
+            </div>   
         </div>
-        <div class='content noimg' id='2012'>
-                <h2>2012 Title Goes Here</h2>
-                <p>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
-                    engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
-                    headquartered in a warehouse in El Segundo, California. The company has grown rapidly since it was founded in 2002, growing from 160 
-                    employees in November 2005 to 1,100 in 2010, 3,800 employees and contractors by October 2013, nearly 5,000 by late 2015, and 
-                    about 6,000 in April 2017. As of November 2017, the company had grown to nearly 7,000. In 2016, Musk gave a speech at the 
-                    International Astronautical Congress, where he explained that the US government regulates rocket technology as an "advanced weapon 
-                    technology", making it difficult to hire non-Americans.</p>    
+        <div class='content col-t-12 col-6 col-w-4' id='2006'>
+                <div>
+                    <h2 class='row'>2006 Title Goes Here</h2>
+                    <p class='col-12'>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
+                        engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
+                        headquartered in a warehouse in El Segundo, California. The company has grown rapidly since it was founded in 2002, growing from 160 
+                        employees in November 2005 to 1,100 in 2010, 3,800 employees and contractors by October 2013, nearly 5,000 by late 2015, and 
+                        about 6,000 in April 2017. As of November 2017, the company had grown to nearly 7,000. In 2016, Musk gave a speech at the 
+                        International Astronautical Congress, where he explained that the US government regulates rocket technology as an "advanced weapon 
+                        technology", making it difficult to hire non-Americans.</p>
+            </div>   
         </div>
-        <div class='content noimg' id='Achievements'>
+        <div class='content col-t-12 col-6 col-w-4' id='2006'>
+                <div>
+                    <h2 class='row'>2006 Title Goes Here</h2>
+                    <p class='col-12'>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
+                        engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
+                        headquartered in a warehouse in El Segundo, California. The company has grown rapidly since it was founded in 2002, growing from 160 
+                        employees in November 2005 to 1,100 in 2010, 3,800 employees and contractors by October 2013, nearly 5,000 by late 2015, and 
+                        about 6,000 in April 2017. As of November 2017, the company had grown to nearly 7,000. In 2016, Musk gave a speech at the 
+                        International Astronautical Congress, where he explained that the US government regulates rocket technology as an "advanced weapon 
+                        technology", making it difficult to hire non-Americans.</p>
+                </div>   
+            </div>
+        <!--<div class='content noimg' id='Achievements'>
                 <h2>Achievements</h2>
                 <dl>
                     <dt>The first privately funded, liquid-fueled rocket (Falcon 1) to reach orbit.</dt>
@@ -101,6 +112,15 @@
     </main>
     <footer>
         <a href="History.html">Back to Top</a>
-        <a href="SpaceX.html">About</a> 
-    </footer>
+        <a href="SpaceX.html">About</a>
+        <div>
+            <select id="theme_select" onchange="changeText()">
+                <option value="space">Space</option>
+                <option value="earth">Earth</option>
+                <option value="lunar">Lunar</option>
+                <option value="martian">Martian</option>
+            </select>
+        </div>
+    </footer>-->
+    </main>
 </body>
