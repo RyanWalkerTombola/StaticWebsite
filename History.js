@@ -21,3 +21,16 @@ function easeIn (time, startValue, deltaValue, duration) {
 function toggleNavbar() {
     document.getElementById('sideNav').classList.toggle('active');
 }
+
+const theme = {};
+theme['space'] = 'lightgrey';
+theme['earth'] = 'dodgerblue';
+theme['lunar'] = 'lightsteelblue';
+theme['martian'] = 'orangered';
+
+
+function changeTheme() {
+    var themeSelect = document.getElementById("theme_select");
+    var selected = themeSelect[themeSelect.selectedIndex].value;
+    document.documentElement.style.setProperty('--theme-color', theme[selected]);
+}

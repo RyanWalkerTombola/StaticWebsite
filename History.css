@@ -1,3 +1,8 @@
+:root {
+  --theme-color: lightgrey;
+  --border-radius: 10px;
+}  
+
 * {
   margin: 0;
     box-sizing: border-box;
@@ -115,8 +120,9 @@ main {
   margin-top: 20px;
 }
 
-.content div{
+.content{
   float: left;
+  position: relative;
   margin: 25px 50px;
   padding: 15px;
   background-color: black;
@@ -129,7 +135,7 @@ main {
     margin: 10px 0;
 }
 
-.content p, ul, dl {
+.content p, ul, dl{
   margin: 10px 0;
   font-size: 16px;
   line-height: 22px;
@@ -201,7 +207,7 @@ footer {
   text-align: center;
 }
 
-footer a, footer div {
+footer a, footer div{
   display: inline-block;
   padding: 12px;
   text-decoration: none;
