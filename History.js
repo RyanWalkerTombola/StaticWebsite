@@ -7,7 +7,7 @@ function moveHeader() {
             clearInterval(id);
         } else {
             time++;
-            elem.style.top = easeIn(time, 400, -400, 120);
+            elem.style.top = easeIn(time, 100, -200, 120);
             elem.style.opacity = easeIn(time, -0.5, 1.5, 120);
         }
     }
