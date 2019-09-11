@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    color: #ddd;
+    color: var(--theme-color);
     border-radius: 50px;
     /*border: 2px solid blue;*/
 }
@@ -50,7 +50,7 @@ header h2 {
     text-align: center;
     font-size: 18px;
     border-radius: 1000px;
-    border: 2px solid #ddd;
+    border: 2px solid var(--theme-color);
     margin: 0 10px;
     animation: fade 0.2s;
     overflow: hidden;
@@ -59,19 +59,19 @@ header h2 {
   
 .button:hover {
     animation: highlight 0.4s;
-    background-color: #ddd;
+    background-color: var(--theme-color);
     color: black;
     cursor: pointer;
   }
 
   @keyframes highlight {
-    from {background-color: black; color: #ddd;}
-    to {background-color: #ddd; color: black;}
+    from {background-color: black; color: var(--theme-color);}
+    to {background-color: var(--theme-color); color: black;}
   }
 
   @keyframes fade {
-    from {background-color: #ddd; color: black;}
-    to {background-color: black; color: #ddd;}
+    from {background-color: var(--theme-color); color: black;}
+    to {background-color: black; color: var(--theme-color);}
   }
 
   /* Shapes & lays out the content box */
@@ -106,7 +106,7 @@ header h2 {
 
 .left {
   padding: 0;
-  border: 2px solid #ddd;
+  border: 2px solid var(--theme-color);
 }
 
 .left p {
@@ -115,7 +115,7 @@ header h2 {
 }
 
 .left table {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid var(--theme-color);
   border-radius: 50px 50px 0 0;
   width: 100%;
   margin: 0;
