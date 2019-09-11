@@ -1,3 +1,13 @@
+function onLoad() {
+    loadTheme();
+    changeText();
+}
+
+function loadTheme() {
+    var theme = sessionStorage.getItem('theme');
+    document.documentElement.style.setProperty('--theme-color', theme);
+}
+
 const rocketText = {};
 rocketText['falcon9'] = "Falcon 9 is a two-stage rocket designed for the reliable and safe transport of satellites and the Dragon spacecraft into orbit. Falcon 9 is the first orbital class rocket capable of reflight. SpaceX believes rocket reusability is the key breakthrough needed to reduce the cost of access to space and enable people to live on other planets.";
 rocketText['falconHeavy'] = "Falcon Heavy is the most powerful operational rocket in the world by a factor of two. With the ability to lift into orbit nearly 64 metric tons (141,000 lb)---a mass greater than a 737 jetliner loaded with passengers, crew, luggage and fuel--Falcon Heavy can lift more than twice the payload of the next closest operational vehicle, the Delta IV Heavy, at one-third the cost. Falcon Heavy draws upon the proven heritage and reliability of Falcon 9.";

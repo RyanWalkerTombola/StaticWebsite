@@ -1,3 +1,8 @@
+function onLoad() {
+    loadTheme();
+    moveHeader();
+}
+
 function moveHeader() {
     var elem = document.getElementById(id="headerMove")
     var time = 0;
@@ -8,7 +13,7 @@ function moveHeader() {
         } else {
             time++;
             elem.style.top = easeIn(time, 100, -200, 120);
-            elem.style.opacity = easeIn(time, -0.5, 1.5, 120);
+            elem.style.opacity = easeIn(time, -0.5, 1.5, 120 );
         }
     }
 }
@@ -22,15 +27,18 @@ function toggleNavbar() {
     document.getElementById('sideNav').classList.toggle('active');
 }
 
-const theme = {};
-theme['space'] = 'lightgrey';
-theme['earth'] = 'dodgerblue';
-theme['lunar'] = 'lightsteelblue';
-theme['martian'] = 'orangered';
+let themes = ['lightgrey', 'dodgerblue', 'lightsteelblue', 'orangered'];
 
+function loadTheme() {
+    var theme = sessionStorage.getItem('theme');
+    document.documentElement.style.setProperty('--theme-color', theme);
+    var themeSelect = document.getElementById("theme_select"); 
+    themeSelect.selectedIndex = themes.indexOf(theme);
+}
 
 function changeTheme() {
     var themeSelect = document.getElementById("theme_select");
-    var selected = themeSelect[themeSelect.selectedIndex].value;
-    document.documentElement.style.setProperty('--theme-color', theme[selected]);
+    var theme = themes[themeSelect.selectedIndex];
+    document.documentElement.style.setProperty('--theme-color', theme);
+    sessionStorage.setItem('theme', theme);
 }

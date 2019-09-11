@@ -1,3 +1,8 @@
+:root {
+  --theme-color: lightgrey;
+  --border-radius: 10px;
+}
+
 /* Makes rows stack properly */
 .row::after{
     content: "";
@@ -67,8 +72,12 @@
   animation:fadeIn ease 1;
   animation-fill-mode: forwards;
   animation-duration:1s;
+  position: relative;
 }
 
-.fade-in.one {animation-delay: 0.5s;}
-.fade-in.two {animation-delay: 1s;}
-.fade-in.three {animation-delay: 2s;}
+.fade-in.d0 {animation-delay: 0;}
+.fade-in.d250 {animation-delay: 250ms;}
+.fade-in.d500 {animation-delay: 500ms;}
+.fade-in.d750 {animation-delay: 750ms;}
+.fade-in.d1000 {animation-delay: 1000ms;}
+.fade-in.d1500 {animation-delay: 1500ms;}

@@ -5,8 +5,8 @@
         <link rel="stylesheet" type="text/css" href="History.css">
         <script type="text/javascript" src="History.js"></script>
 </head>
-<body class = "background-img" onload="moveHeader();" onload="changeTheme();" >
-    <div class='fade-in three' id='sideNav' onclick="toggleNavbar();">
+<body class = "background-img" onload="onLoad();">
+    <div class='fade-in d1500' id='sideNav' onclick="toggleNavbar();">
         <img src="Images/Button.png">
         <h3>Timeline</h3>
         <div>
@@ -24,13 +24,13 @@
             <img src="images/SpaceX.png" alt="">
         </div>
     </header>
-    <div class='navBar fade-in two'>
+    <div class='navBar fade-in d500'>
         <a href="SpaceX.html">About</a>
         <a href="Rockets.html">Rockets</a>
     </div>
     <main class='row'>
         <div class='col-t-12 col-6 col-w-6' id='2001'>
-            <div class='content fade-in one'>
+            <div class='content fade-in d250'>
                 <h2>2001 An Idea was Born</h2>
                 <img class='col-t-4 col-12 col-w-5' src="images/Elon Musk.jpg" alt="">
                 <p class='col-t-8 col-12 col-w-7'>In 2001, entrepreneur <a href="https://en.wikipedia.org/wiki/Elon_Musk">Elon Musk</a> conceptualized the Mars Oasis project, he had plans 
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class='col-t-12 col-6 col-w-6' id='2002'>
-            <div class='content fade-in two'>
+            <div class='content fade-in d750'>
                 <h2>2002 The Company was Founded</h2>
                 <img class='col-t-4 col-12 col-w-5' src="Images/SpaceX Building.jpg" alt=""> 
                 <p class='col-t-8 col-12 col-w-7'>(needs updating)In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class='col-t-12 col-6 col-w-4' id='2006'>
-            <div class='content fade-in three'>
+            <div class='content fade-in d1000'>
                 <h2>2006 Title Goes Here</h2>
                 <p class='col-12'>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
                     engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
@@ -67,7 +67,7 @@
             </div>   
         </div>
         <div class='col-t-12 col-6 col-w-4' id='2006'>
-                <div class="content fade-in three">
+                <div class="content fade-in d1000">
                     <h2>2006 Title Goes Here</h2>
                     <p class='col-12'>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
                         engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
@@ -79,7 +79,7 @@
             </div>   
         </div>
         <div class='col-t-12 col-6 col-w-4' id='2006'>
-                <div class="content fade-in three">
+                <div class="content fade-in d1000">
                     <h2>2006 Title Goes Here</h2>
                     <p class='col-12'>(placeholder text) In early 2002, Elon Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached rocket 
                         engineer Tom Mueller (later SpaceX's CTO of Propulsion) and Mueller agreed to work for Musk, and thus SpaceX was born. SpaceX was first 
@@ -91,7 +91,7 @@
                 </div>   
             </div>
         <div class='col-t-12 col-12 col-w-12' id='Achievements'>
-            <div class="content fade-in three">
+            <div class="content fade-in d1000">
                 <h2>Achievements</h2>
                 <dl class='col-12'>
                     <dt>The first privately funded, liquid-fueled rocket (Falcon 1) to reach orbit.</dt>
@@ -112,16 +112,18 @@
             </div>
         </div>
     </main>
-    <footer class="fade-in three">
-        <a href="History.html">Back to Top</a>
-        <a href="SpaceX.html">About</a>
-        <div>
-            <select id="theme_select" onchange="changeTheme()">
-                <option value="space">Space</option>
-                <option value="earth">Earth</option>
-                <option value="lunar">Lunar</option>
-                <option value="martian">Martian</option>
-            </select>
+    <footer>
+        <div class="fade-in d1500">
+            <a href="History.html">Back to Top</a>
+            <a href="SpaceX.html">About</a>
+            <div class='theme'>
+                <select id="theme_select" onchange="changeTheme()">
+                    <option value="space">Space</option>
+                    <option value="earth">Earth</option>
+                    <option value="lunar">Lunar</option>
+                    <option value="martian">Martian</option>
+                </select>
+            </div>
         </div>
     </footer>
     </main>
