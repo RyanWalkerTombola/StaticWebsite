@@ -31,6 +31,7 @@ let themes = ['lightgrey', 'dodgerblue', 'lightsteelblue', 'orangered'];
 
 function loadTheme() {
     var theme = sessionStorage.getItem('theme');
+    if (theme == null) {theme = 'lightgrey';}
     document.documentElement.style.setProperty('--theme-color', theme);
     var themeSelect = document.getElementById("theme_select"); 
     themeSelect.selectedIndex = themes.indexOf(theme);

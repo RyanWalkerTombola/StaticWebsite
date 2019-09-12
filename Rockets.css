@@ -14,16 +14,6 @@ body {
     font-family: monospace, Helvetica, sans-serif;
 }
 
-/* Adds Earth background image at the top of the page and repeating space background */
-.background-img {
-    background-image: url("Images/Earth.jpg"), url("Images/stars.png");
-    background-color: black;
-    height: 200px;
-    background-position: center;
-    background-repeat: no-repeat, repeat-y;
-    background-size: cover;
-}
-
 /* Header of the page */
 header {
     margin: 220px 20% 0 20%;
