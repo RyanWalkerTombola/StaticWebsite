@@ -43,7 +43,7 @@ const rocketMars = {};
 rocketMars['falcon9'] = '4,020 kg';
 rocketMars['falconHeavy'] = '16,800 kg';
 rocketMars['falcon1'] = '-';
-rocketMars['bfr'] = '-';
+rocketMars['bfr'] = '-'; 
 
 const rocketImage = {};
 rocketImage['falcon9'] = 'Images/Falcon9.jpg';
