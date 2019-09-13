@@ -1,5 +1,6 @@
 .content {
   border: none;
+  box-shadow: none;
 }
 
 .content h2 {
@@ -20,7 +21,6 @@ header div {
 header h2 {
   font-size: calc(10px + 2vw);
   line-height: calc(10px + 2vw);
-  text-shadow: 4px 4px 4px black;
 }
 
 .button {

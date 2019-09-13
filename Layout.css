@@ -145,6 +145,7 @@ body {
 }
 
 .navBar a:hover {
+  box-shadow: 0 0 10px var(--theme-color);
   animation: highlight 0.4s;
   background-color: var(--theme-color);;
   color: black;
@@ -169,6 +170,10 @@ header {
   height: 50vw;
 }
 
+header h2 {
+  text-shadow: 4px 4px 4px black;
+}
+
 .content{
   display: block;
   overflow: auto;
@@ -182,20 +187,20 @@ header {
 }
 
 .content h2 {
-    font-size: calc(24px + 0.5vw);
+    font-size: calc(20px + 0.5vw);
     margin: 10px 0;
 }
 
 .content p, ul, dl{
   margin: 10px 0;
-  font-size: calc(14px + 0.5vw);
-  line-height: calc(18px + 0.5vw);
+  font-size: calc(12px + 0.5vw);
+  line-height: calc(16px + 0.5vw);
 }
 
 .content dl {
   width: 100%;
-  font-size: calc(18px + 0.5vw);
-  line-height: calc(32px + 0.5vw);
+  font-size: calc(14px + 0.5vw);
+  line-height: calc(24px + 0.5vw);
 }
 
 .content span {

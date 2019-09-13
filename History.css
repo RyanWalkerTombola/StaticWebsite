@@ -2,9 +2,10 @@
 #sidenav {
     border: 2px solid var(--theme-color);
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     margin: 10px;
     background-color: black;
+    box-shadow: 4px 4px 12px black;
     overflow-x: hidden;
     width: 56px;
     max-height: 56px;
@@ -74,14 +75,14 @@
 
 /* Highlights Navlink */
 @keyframes highlight {
-  from {background-color: black; color: var(--theme-color);}
-  to {background-color: var(--theme-color); color: black;}
+  from {background-color: black; color: var(--theme-color); box-shadow: 0 0 0 var(--theme-color);}
+  to {background-color: var(--theme-color); color: black; box-shadow: 0 0 10px var(--theme-color);}
 }
 
 /* Fades Navlink */
 @keyframes fade {
-  from {background-color: var(--theme-color); color: black;}
-  to {background-color: black; color: var(--theme-color);}
+  from {background-color: var(--theme-color); color: black; box-shadow: 0 0 10px var(--theme-color);}
+  to {background-color: black; color: var(--theme-color); box-shadow: 0 0 0 var(--theme-color);}
 }
 
 main {
@@ -90,20 +91,35 @@ main {
 
 /* Div that hold the header and image */
 header div {
-  margin-top: 10vw;
-  height: 16vw;
-}
-
-/* Header Image */
-header img {
-  min-height: 70%;
+  margin-top: 12vw !important;
+  max-height: 16vw;
   max-width: 100%;
+  width: calc(400px + 30vw);
 }
 
 /* Header Text */
 header h2 {
   height: 30%;
-  font-size: 6vw;
+  font-size: calc(12px + 3vw);
+}
+
+/* Header Image */
+header img {
+  position: absolute;
+  top: calc(22px + 4vw);
+  left: 0;
+  max-height: 70%;
+  width: 100%;
+}
+
+.shadowImage{
+  position: absolute;
+  top: calc(22px + 4vw + 4px);
+  left: 4px;
+  z-index: -1;
+  max-height: 70%;
+  max-width: 100%;
+  filter: blur(4px) brightness(0%);
 }
 
 /* Footer of the page*/
