@@ -114,7 +114,7 @@ function tick() {
   displayGrid();
   
   if (!dead){
-      setTimeout(tick, 120);
+      setTimeout(tick, 180);
   }
 }
 
@@ -174,14 +174,14 @@ function movePlayer(direction){
     case 'left': playerX--; break;
   }
   
-  playerX = clamp(playerX, 0, gridSize - 1);
-  playerY = clamp(playerY, 0, gridSize - 1);
+  playerX = teleport(playerX, 0, gridSize - 1);
+  playerY = teleport(playerY, 0, gridSize - 1);
   
 
   if (grid[playerY][playerX] == '@'){
     generateApple();
     score++;
-    playerLength += 2;
+    playerLength += 4;
   } else if (grid[playerY][playerX] === '0'){
     gameOver();
   }
@@ -221,6 +221,10 @@ function displayGrid () {
 
 function clamp(num, min, max) {
   return num <= min ? min : num >= max ? max : num;
+}
+
+function teleport(num, min, max) {
+  return num < min ? max : num > max ? min : num;
 }
   
 function gameOver(){

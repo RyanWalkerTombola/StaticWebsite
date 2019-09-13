@@ -194,13 +194,13 @@ header h2 {
 .content p, ul, dl{
   margin: 10px 0;
   font-size: calc(12px + 0.5vw);
-  line-height: calc(16px + 0.5vw);
+  line-height: 1.4;
 }
 
 .content dl {
   width: 100%;
   font-size: calc(14px + 0.5vw);
-  line-height: calc(24px + 0.5vw);
+  line-height: 1.8;
 }
 
 .content span {
