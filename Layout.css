@@ -12,7 +12,6 @@
   
   [class*="col-"] {
     float: left;
-  
     /* Width for phones */
     width: 100%;
   }
@@ -65,7 +64,7 @@
     .col-w-12 {width: 100%;}
   }
 
-@keyframes fadeIn { from { opacity:0; top: 80px;} to { opacity:1; top: 10px;} }
+@keyframes fadeIn { from { opacity:0; top: 80px;} to { opacity:1; top: 0px;} }
 
 .fade-in {
   opacity: 0;
@@ -85,14 +84,11 @@
 .navbar {
   text-align: center;
   margin-top: 20px;
-}
-
-.navbar.top {
-  margin-top: 26%;
-  text-align: center;
+  line-height: 50px;
 }
 
 .navBar a, .navbar div {
+  line-height: 22px;
   display: inline-block;
   padding: 12px;
   text-decoration: none;
@@ -100,7 +96,7 @@
   font-size: 18px;
   border-radius: 1000px;
   border: 2px solid var(--theme-color);
-  margin: 0 10px;
+  margin: 10px 10px;
   animation: fade 0.2s;
   overflow: hidden;
   width: auto;

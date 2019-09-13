@@ -70,15 +70,15 @@ header h2 {
   @keyframes fade {
     from {background-color: var(--theme-color); color: black;}
     to {background-color: black; color: var(--theme-color);}
-  }
+}
 
-  /* Shapes & lays out the content box */
+/* Shapes & lays out the content box */
 .content {
     padding: 2% 4%;
     margin: 1% 5%;
     border-radius: 50px;
     text-align: center;
-  }
+}
 
 /* Content title */
 .content h2 {
