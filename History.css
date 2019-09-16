@@ -125,7 +125,6 @@ footer a, footer .theme{
   width: auto;
 }
 
-footer div select {
-  font-size: 14px;
-  background-color: black;
+#theme_select {
+  border: 2px solid transparent;
 }

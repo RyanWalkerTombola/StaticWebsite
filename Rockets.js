@@ -28,20 +28,20 @@ rocketPrice['falcon1'] = '$7.9M';
 rocketPrice['bfr'] = '-';
 
 const rocketLEO = {};
-rocketLEO['falcon9'] = '22,800 kg';
-rocketLEO['falconHeavy'] = '63,800 kg';
-rocketLEO['falcon1'] = '570 kg';
-rocketLEO['bfr'] = '100,000 kg - 150,000 kg';
+rocketLEO['falcon9'] = '22,800kg';
+rocketLEO['falconHeavy'] = '63,800kg';
+rocketLEO['falcon1'] = '570kg';
+rocketLEO['bfr'] = '100,000 kg - 150,000kg';
 
 const rocketGTO = {};
-rocketGTO['falcon9'] = '8,300 kg';
-rocketGTO['falconHeavy'] = '26,700 kg';
+rocketGTO['falcon9'] = '8,300kg';
+rocketGTO['falconHeavy'] = '26,700kg';
 rocketGTO['falcon1'] = '-';
 rocketGTO['bfr'] = '-';
 
 const rocketMars = {};
-rocketMars['falcon9'] = '4,020 kg';
-rocketMars['falconHeavy'] = '16,800 kg';
+rocketMars['falcon9'] = '4,020kg';
+rocketMars['falconHeavy'] = '16,800kg';
 rocketMars['falcon1'] = '-';
 rocketMars['bfr'] = '-'; 
 

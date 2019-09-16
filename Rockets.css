@@ -2,6 +2,7 @@
 header {
     margin: 220px 20% 0 20%;
     text-align: center;
+    overflow: hidden;
 }
 
 header h1 {
@@ -17,75 +18,43 @@ header h2 {
     font-weight: 400;
 }
 
-  /* Shapes & lays out the content box */
 .content {
-    padding: 2% 4%;
-    margin: 1% 5%;
-    border-radius: 50px;
-    text-align: center;
-  }
-
-/* Content title */
-.content h2 {
-    font-size: 40px;
-    background-color: black;
-    border-radius: 50px;
-    padding: 20px;
-}
-
-/* Content paragraph */
-.content p, ul, dl, table, .left{
-    display: inline-block;
-    font-size: 20px;
-    line-height: 40px;
-    margin-right: 4%;
-    margin-top: 2%;
-    width: 60%;
-    vertical-align: top;
-    background-color: black;
-    border-radius: 50px;
-    padding: 20px;
-}
-
-.left {
+  height: fit-content;
   padding: 0;
-  border: 2px solid var(--theme-color);
 }
 
-.left p {
-  width: 100%;
-  margin: 0;
-}
-
-.left table {
+.content div {
+  height: 500px;
   border-bottom: 2px solid var(--theme-color);
-  border-radius: 50px 50px 0 0;
-  width: 100%;
-  margin: 0;
 }
 
-.center {
+.content p, table{
   text-align: center;
+  padding: 20px; 
+  margin: 0;
+  font-size: calc(12px + 0.5vw);
+  line-height: 1.4;
+  border-collapse: collapse;
 }
 
-.left table td {
-  width: 60%;
+table {
+  height: 500px;
+}
+
+th, td {
+  text-align: center;
+  border: 2px solid var(--theme-color);
+  width: 50%;
 }
 
 .content select {
   display: inline-block;
   font-size: 20px;
   background-color: black;
+  height: 30px;
+  margin: 10px 0;
 }
 
-/* Resiszes content if there is no image */
-.noimg p, ul, dl{
-    width: 100%;
-  }
-
-  /* Content image */
-.content img {
-  display: inline-block;
-  width: 35%;
-  margin-top: 2%;
+#rocket_image {
+  max-height: 450px;
 }

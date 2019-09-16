@@ -94,7 +94,6 @@
   margin: 0;
   box-sizing: border-box;
   color: var(--theme-color);
-  border: 2px solid transparent;
   /*border: 2px solid blue;*/
 }
 
@@ -187,10 +186,10 @@ body {
 
 header {
   text-align: center;
-  height: 50vw;
+  height: 35vw;
 }
 
-header h2 {
+header h1, header h2 {
   text-shadow: 4px 4px 4px black;
 }
 
