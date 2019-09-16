@@ -22,34 +22,3 @@ header h2 {
   font-size: calc(10px + 2vw);
   line-height: calc(10px + 2vw);
 }
-
-.button {
-    display: inline-block;
-    padding: 12px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 1000px;
-    border: 2px solid var(--theme-color);
-    margin: 0 10px;
-    animation: fade 0.2s;
-    overflow: hidden;
-    width: auto;
-  }
-  
-.button:hover {
-    animation: highlight 0.4s;
-    background-color: var(--theme-color);
-    color: black;
-    cursor: pointer;
-  }
-
-  @keyframes highlight {
-    from {background-color: black; color: var(--theme-color);}
-    to {background-color: var(--theme-color); color: black;}
-  }
-
-  @keyframes fade {
-    from {background-color: var(--theme-color); color: black;}
-    to {background-color: black; color: var(--theme-color);}
-}
