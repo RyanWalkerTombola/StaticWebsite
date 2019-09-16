@@ -1,13 +1,16 @@
-/* Header of the page */
-header {
-    margin: 220px 20% 0 20%;
-    text-align: center;
-    overflow: hidden;
+header div {
+  margin-top: 11vw !important;
 }
 
 header h1 {
-    line-height: 50px;
-    font-size: 50px;
+  font-size: calc(14px + 2vw) !important;
+  line-height: 1.4 !important;
+}
+
+/* Header Text */
+header h2 {
+  font-size: calc(4px + 2vw) !important;
+  line-height: 1.4 !important;
 }
 
 /* Header Text */
@@ -16,7 +19,7 @@ header h2 {
     line-height: 30px;
     font-size: 24px;
     font-weight: 400;
-}
+} */
 
 .content {
   height: fit-content;
