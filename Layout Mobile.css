@@ -1,0 +1,5 @@
+[class*="col-"] {
+    float: left;
+    /* Width for phones */
+    width: 100%;
+  }
