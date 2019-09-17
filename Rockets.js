@@ -10,45 +10,45 @@ function loadTheme() {
 }
 
 const rocketText = {};
-rocketText['falcon9'] = "Falcon 9 is a two-stage rocket designed for the reliable and safe transport of satellites and the Dragon spacecraft into orbit. Falcon 9 is the first orbital class rocket capable of reflight. SpaceX believes rocket reusability is the key breakthrough needed to reduce the cost of access to space and enable people to live on other planets.";
-rocketText['falconHeavy'] = "Falcon Heavy is the most powerful operational rocket in the world by a factor of two. With the ability to lift into orbit nearly 64 metric tons (141,000 lb)---a mass greater than a 737 jetliner loaded with passengers, crew, luggage and fuel--Falcon Heavy can lift more than twice the payload of the next closest operational vehicle, the Delta IV Heavy, at one-third the cost. Falcon Heavy draws upon the proven heritage and reliability of Falcon 9.";
-rocketText['falcon1'] = "Falcon 1 is a small liquid fueled orbital launch vehicle. Both stages are Kerosene / LOX fueled.";
+rocketText['falcon1'] = "Falcon 1 was the first rocket developed by SpaceX and the first privately developed liquid fuel launch vehicle to reach orbit around Earth, it was powered by a Merlin engine in the first stage, a Kestrel engine in the second and both stages used LOX/RP-1. Falcon 1 had a total of 5 launches over its lifetime, the first 3 of which failed. After 3 consecutive failures SpaceX was close to bankrupcy however the fourth launch was a success allowing the company to continue to develop new technologies and reach where it is today.";
+rocketText['falcon9'] = "Falcon 9 is the successor to the Falcon 1 being named for its use of nine Merlin rocket engines powered by LOX/RP-1. It is a two-stage rocket designed for the reliable and safe transport of satellites and the Dragon spacecraft into orbit. Falcon 9 is the first orbital class rocket capable of reflight. SpaceX believes rocket reusability is the key breakthrough needed to reduce the cost of access to space and enable people to live on other planets.";
+rocketText['falconHeavy'] = "Falcon Heavy is the most powerful operational rocket in the world by a factor of two. With the ability to lift into orbit nearly 64 metric tons (a mass greater than a 737 jetliner loaded with passengers, crew, luggage and fuel) Falcon Heavy can lift more than twice the payload of the next closest operational vehicle, the Delta IV Heavy, at one-third the cost. Falcon Heavy draws upon the proven heritage and reliability of Falcon 9.";
 rocketText['bfr'] = "The BFR (Big Falcon Rocket) represents a fully reusable transportation system designed to service all Earth orbit needs as well as the Moon and Mars. This two-stage vehicle composed of the Super Heavy rocket (booster) and Starship (ship) will eventually replace Falcon 9, Falcon Heavy and Dragon. By creating a single system that can service a variety of markets, SpaceX can redirect resources from Falcon 9, Falcon Heavy and Dragon to Starship which is fundamental in making the system affordable.";
 
 const rocketStatus = {};
-rocketStatus['falcon9'] = 'In Use';
-rocketStatus['falconHeavy'] = 'In Use';
 rocketStatus['falcon1'] = 'Retired';
+rocketStatus['falcon9'] = 'Active';
+rocketStatus['falconHeavy'] = 'Active';
 rocketStatus['bfr'] = 'Proposed';
 
 const rocketPrice = {};
+rocketPrice['falcon1'] = '$7.9M';
 rocketPrice['falcon9'] = '$62M';
 rocketPrice['falconHeavy'] = '$90M';
-rocketPrice['falcon1'] = '$7.9M';
 rocketPrice['bfr'] = '-';
 
 const rocketLEO = {};
+rocketLEO['falcon1'] = '570kg';
 rocketLEO['falcon9'] = '22,800kg';
 rocketLEO['falconHeavy'] = '63,800kg';
-rocketLEO['falcon1'] = '570kg';
 rocketLEO['bfr'] = '100,000 kg - 150,000kg';
 
 const rocketGTO = {};
+rocketGTO['falcon1'] = '-';
 rocketGTO['falcon9'] = '8,300kg';
 rocketGTO['falconHeavy'] = '26,700kg';
-rocketGTO['falcon1'] = '-';
 rocketGTO['bfr'] = '-';
 
 const rocketMars = {};
+rocketMars['falcon1'] = '-';
 rocketMars['falcon9'] = '4,020kg';
 rocketMars['falconHeavy'] = '16,800kg';
-rocketMars['falcon1'] = '-';
 rocketMars['bfr'] = '-'; 
 
 const rocketImage = {};
+rocketImage['falcon1'] = 'Images/Falcon1Launch.jpg';
 rocketImage['falcon9'] = 'Images/Falcon9.jpg';
 rocketImage['falconHeavy'] = 'Images/Falcon Heavy.jpg';
-rocketImage['falcon1'] = 'Images/Falcon1Launch.jpg';
 rocketImage['bfr'] = 'Images/BFR.png';
 
 function changeText () {
@@ -71,6 +71,7 @@ function changeText () {
 
 
 // JavaSnake
+var ticksPerSecond = 5;
 var circle = ["_", "\\", "|", "/" ];
 var statusPos = 0;
 
@@ -80,6 +81,7 @@ var grid;
 var appleX = 3;
 var appleY = 3;
 
+var tickSpeed;
 var playerX;
 var playerY;
 var playerLength;
@@ -92,6 +94,7 @@ var dead = true;
 var cooldowned = true;
 
 function setVars (){
+tickSpeed = 1000 / ticksPerSecond;
 playerX = 8;
 playerY = 8;
 playerLength = 3;
@@ -114,7 +117,7 @@ function tick() {
   displayGrid();
   
   if (!dead){
-      setTimeout(tick, 180);
+      setTimeout(tick, tickSpeed);
   }
 }
 
@@ -174,14 +177,21 @@ function movePlayer(direction){
     case 'left': playerX--; break;
   }
   
-  playerX = teleport(playerX, 0, gridSize - 1);
-  playerY = teleport(playerY, 0, gridSize - 1);
+  if (difficulty = 0) {
+    playerX = teleport(playerX, 0, gridSize - 1);
+    playerY = teleport(playerY, 0, gridSize - 1);
+  } else {
+    playerX = clamp(playerX, 0, gridSize - 1);
+    playerY = clamp(playerY, 0, gridSize - 1);
+  }
+  
   
 
   if (grid[playerY][playerX] == '@'){
-    generateApple();
-    score++;
-    playerLength += 4;
+    generateApple(); 
+    playerLength += 2;
+    score = playerLength - 3;
+    tickSpeed -= 3;
   } else if (grid[playerY][playerX] === '0'){
     gameOver();
   }

@@ -126,5 +126,12 @@ footer a, footer .theme{
 }
 
 #theme_select {
-  border: 2px solid transparent;
+  vertical-align: top;
+  display: inline-block;
+  width: 120px;
+  border: 2px solid var(--theme-color);
+  border-radius: 1000px;
+  text-align: center;
+  text-align-last: center;
+
 }
