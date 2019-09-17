@@ -71,6 +71,7 @@ function changeText () {
 
 
 // JavaSnake
+var ticksPerSecond = 5;
 var circle = ["_", "\\", "|", "/" ];
 var statusPos = 0;
 
@@ -80,6 +81,7 @@ var grid;
 var appleX = 3;
 var appleY = 3;
 
+var tickSpeed;
 var playerX;
 var playerY;
 var playerLength;
@@ -92,6 +94,7 @@ var dead = true;
 var cooldowned = true;
 
 function setVars (){
+tickSpeed = 1000 / ticksPerSecond;
 playerX = 8;
 playerY = 8;
 playerLength = 3;
@@ -114,7 +117,7 @@ function tick() {
   displayGrid();
   
   if (!dead){
-      setTimeout(tick, 180);
+      setTimeout(tick, tickSpeed);
   }
 }
 
@@ -174,14 +177,21 @@ function movePlayer(direction){
     case 'left': playerX--; break;
   }
   
-  playerX = teleport(playerX, 0, gridSize - 1);
-  playerY = teleport(playerY, 0, gridSize - 1);
+  if (difficulty = 0) {
+    playerX = teleport(playerX, 0, gridSize - 1);
+    playerY = teleport(playerY, 0, gridSize - 1);
+  } else {
+    playerX = clamp(playerX, 0, gridSize - 1);
+    playerY = clamp(playerY, 0, gridSize - 1);
+  }
+  
   
 
   if (grid[playerY][playerX] == '@'){
-    generateApple();
-    score++;
-    playerLength += 4;
+    generateApple(); 
+    playerLength += 2;
+    score = playerLength - 3;
+    tickSpeed -= 3;
   } else if (grid[playerY][playerX] === '0'){
     gameOver();
   }

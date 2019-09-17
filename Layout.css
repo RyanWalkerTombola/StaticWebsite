@@ -233,3 +233,8 @@ header h1, header h2 {
   padding: 10px;
   object-fit: contain;
 }
+
+select:not([multiple]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

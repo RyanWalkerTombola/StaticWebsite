@@ -59,5 +59,15 @@ th, td {
 }
 
 #rocket_image {
-  max-height: 450px;
+  max-height: 400px;
+}
+
+#rocket_select {
+  height: 50px;
+  margin-top: 25px;
+  width: 200px;
+  border-radius: 100px;
+  border: 2px solid var(--theme-color);
+  text-align: center;
+  text-align-last: center;
 }
